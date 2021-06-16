@@ -12,12 +12,12 @@ const commentController = {
           { new: true }
         );
       })
-      .then(dbCentData => {
-        if (!dbCentData) {
+      .then(dbpostData => {
+        if (!dbpostData) {
           res.status(404).json({ message: 'No post found with this id!' });
           return;
         }
-        res.json(dbCentData);
+        res.json(dbpostData);
       })
       .catch(err => res.json(err));
   },
@@ -28,12 +28,12 @@ const commentController = {
       { _id: params.commentId }, 
       { $push: { replies: body } }, 
       { new: true, runValidators: true })
-      .then(dbCentData => {
-        if (!dbCentData) {
+      .then(dbpostData => {
+        if (!dbpostData) {
           res.status(404).json({ message: 'No post found with this id!' });
           return;
         }
-        res.json(dbCentData);
+        res.json(dbpostData);
       })
       .catch(err => res.json(err));
   },
@@ -51,12 +51,12 @@ const commentController = {
           { new: true }
         );
       })
-      .then(dbCentData => {
-        if (!dbCentData) {
+      .then(dbpostData => {
+        if (!dbpostData) {
           res.status(404).json({ message: 'No post found with this id!' });
           return;
         }
-        res.json(dbCentData);
+        res.json(dbpostData);
       })
       .catch(err => res.json(err));
   },
@@ -68,7 +68,7 @@ const commentController = {
       { $pull: { replies: { replyId: params.replyId } } },
       { new: true }
     )
-      .then(dbCentData => res.json(dbCentData))
+      .then(dbpostData => res.json(dbpostData))
       .catch(err => res.json(err));
   }
 };

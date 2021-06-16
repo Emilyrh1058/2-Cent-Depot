@@ -10,7 +10,7 @@ const centController = {
       })
       .select('-__v')
       .sort({ _id: -1 })
-      .then(dbCentData => res.json(dbCentData))
+      .then(dbpostData => res.json(dbpostData))
       .catch(err => {
         console.log(err);
         res.sendStatus(400);
@@ -25,7 +25,7 @@ const centController = {
         select: '-__v'
       })
       .select('-__v')
-      .then(dbCentData => res.json(dbCentData))
+      .then(dbpostData => res.json(dbpostData))
       .catch(err => {
         console.log(err);
         res.sendStatus(400);
@@ -35,19 +35,19 @@ const centController = {
   // create Cent
   createCent({ body }, res) {
     Cent.create(body)
-      .then(dbCentData => res.json(dbCentData))
+      .then(dbpostData => res.json(dbpostData))
       .catch(err => res.json(err));
   },
 
   // update cent by id
   updateCent({ params, body }, res) {
     Cent.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
-      .then(dbCentData => {
-        if (!dbCentData) {
+      .then(dbpostData => {
+        if (!dbpostData) {
           res.status(404).json({ message: 'No Cent found with this id!' });
           return;
         }
-        res.json(dbCentData);
+        res.json(dbpostData);
       })
       .catch(err => res.status(400).json(err));
   },
@@ -55,7 +55,7 @@ const centController = {
   // delete Cent
   deleteCent({ params }, res) {
     Cent.findOneAndDelete({ _id: params.id })
-      .then(dbCentData => res.json(dbCentData))
+      .then(dbpostData => res.json(dbpostData))
       .catch(err => res.json(err));
   }
 };
