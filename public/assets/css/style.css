@@ -1,7 +1,7 @@
 :root {
   --primary: #f500d4;
   --secondary: #f172b8;
-  --tertiary: #fffd8c;
+  --tertiary: #0fa8e4;
   --quaternary: #e0dfd5;
   --quinary: #fcf83b;
   --light: #e8e9eb;
@@ -181,6 +181,16 @@ select {
 .form-input {
   width: 100%;
   padding: 0.75rem;
+  margin: 0.2rem 0;
+  font-size: 1.2rem;
+  border: 2px solid var(--dark);
+  border-radius: var(--border-radius);
+  transition: box-shadow 0.2s;
+}
+
+.form-input-post {
+  width: 100%;
+  padding: 3rem;
   margin: 0.2rem 0;
   font-size: 1.2rem;
   border: 2px solid var(--dark);

@@ -5,7 +5,7 @@ router.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../../public/2cents-list.html'));
 });
 
-router.get('/add-2cents', (req, res) => {
+router.get('/add-post', (req, res) => {
   res.sendFile(path.join(__dirname, '../../public/add-2cents.html'));
 });
 
