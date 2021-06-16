@@ -1,23 +1,24 @@
 {
-  "name": "2-cent-depot",
+  "name": "18-nosql",
   "version": "1.0.0",
-  "description": "Social media app",
+  "private": true,
+  "description": "",
   "main": "server.js",
-  "dependencies": {
-    "mongoose": "^5.12.14",
-    "node": "^16.3.0"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.13"
+  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Emilyrh1058/2-Cent-Depot.git"
   },
-  "author": "Emily Salinas",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Emilyrh1058/2-Cent-Depot/issues"
   },
