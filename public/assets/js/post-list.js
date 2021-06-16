@@ -20,8 +20,7 @@ const printPost = ({ _id, postTitle, topics, commentCount, createdBy, createdAt 
           <h4 class="text-dark">By ${createdBy}</h4>
           <p>On ${createdAt}</p>
           <p>${commentCount} Comments</p>
-          <h5 class="text-dark">Suggested Size: ${size}
-          <h5 class="text-dark">Toppings</h5>
+          <h5 class="text-dark">Topics</h5>
           <ul>
             ${topics
               .map(topic => {
