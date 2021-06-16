@@ -35,7 +35,7 @@ function getPost() {
 function printPost(postData) {
   console.log(postData);
 
-  pizzaId = postData._id;
+  postId = postData._id;
 
   const { postTitle, createdBy, createdAt, topics, comments } = postData;
 

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Thought</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap&family=Karla:400,700|Rubik:400,400i,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <header class="py-3 mb-3">
+    <div class="flex-row justify-space-between align-center container-fluid mx-auto">
+      <a href="/">
+        <h1 class="text-light bg-dark py-3 px-4 logo round-25-80">2Cents Depot</h1>
+      </a>
+
+      <h3 class="text-light bg-dark p-3 round-25-80">
+        What's on your mind?
+      </h3>
+    </div>
+  </header>
+
+  <main class="container-fluid flex-row mx-auto justify-space-between">
+    <div class="col-12 py-3 px-4 my-4 bg-dark round-25-80">
+      <h2 class="text-light">Post your thoughts and spark a discussion.</h2>
+    </div>
+
+    <section class="bg-dark p-3 col-12 col-lg-8 mb-3 round-25-80">
+      <h2 class="text-light ">Let's start our discussion</h2>
+      <div class="col-12 col-lg-6 bg-dark p-3 mb-3">
+        <div class="form-container">
+          <form id="post-form">
+            <div class="mb-2">
+              <label for="post-title" class="form-label">Post Title</label>
+              <input type="text" id="post-title" name="post-title" class="form-input" placeholder="Enter Post Title"
+                required />
+            </div>
+            <div class="mb-2">
+              <label for="created-by" class="form-label">Who's Idea is This?</label>
+              <input type="text" id="created-by" name="created-by" class="form-input" placeholder="Give us your name"
+                required />
+            </div>
+            <h3 class="text-tertiary">Choose your topics</h3>
+            <div class="flex-row justify-space-between">
+              <div class="col-auto">
+                <div>
+                  <input type="checkbox" id="music" name="topic" value="Music">
+                  <label for="music">Music</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="movies" name="topic" value="Movies">
+                  <label for="movies">Movies</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="art" name="topic" value="Art">
+                  <label for="art">Art</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="politics" name="topic" value="Politics">
+                  <label for="politics">Politics</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="books" name="topic" value="Books">
+                  <label for="books">Books</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="food" name="topic" value="Food">
+                  <label for="food">Food</label>
+                </div>
+              </div>
+
+              <div class="col-auto">
+                <div>
+                  <input type="checkbox" id="animals" name="Animals">
+                  <label for="animals">Animals</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="travel" name="topic" value="Travel">
+                  <label for="travel">Travel</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="fashion" name="topic" value="Fashion">
+                  <label for="fashion">Fashion</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="sports" name="topic" value="Sports">
+                  <label for="sports">Sports</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="technology" name="topic" value="Technology">
+                  <label for="technology">Technology</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="home-decor" name="topic" value="Home Decor">
+                  <label for="home-decor">Home Decor</label>
+                </div>
+              </div>
+
+              <div class="col-auto">
+                <div>
+                  <input type="checkbox" id="social-media" name="topic" value="Social Media">
+                  <label for="social-media">Social Media</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="conservation" name="topic" value="Conservation">
+                  <label for="conservation">Conservation</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="cultures" name="topic" value="Cultures">
+                  <label for="cultures">Cultures</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="tattoos" name="topic" value="Tattoos">
+                  <label for="tattoos">Tattoos</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="marriage" name="topic" value="Marriage">
+                  <label for="marriage">Marriage</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="kids" name="topic" value="Kids">
+                  <label for="kids">Kids</label>
+                </div>
+              </div>
+
+              <!-- custom topics -->
+              <div class="col-auto">
+                <div id="custom-topics-list"></div>
+              </div>
+            </div>
+
+            <div class="w-100 display-block"></div>
+
+            <label for="new-topic" class="form-label">Add another topic to the list!</label>
+            <input type="text" id="new-topic" name="new-topic" class="form-input" placeholder="Add Topic" />
+
+            <button type="button" id="add-topic" class="btn">Add Topic</button>
+
+            <div class="my-4 border-light-top display-block w-100"></div>
+
+            <button type="submit" class="btn w-100 m-auto">Submit Post</button>
+          </form>
+        </div>
+    </section>
+
+    <section class="bg-dark p-3 col-12 col-lg-4 mb-3 round-25-80 min-60-vh">
+      <h2 class="text-light px-2">Looking to do something else?</h2>
+      <nav>
+        <a class="btn display-block round-25-80" href="/">See All Discussions.</a>
+      </nav>
+    </section>
+
+    </div>
+  </main>
+  <script src="./assets/js/add-post.js"></script>
+  <script src="./assets/js/idb.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 :root {
-  --primary: #e4b363;
-  --secondary: #ef6461;
+  --primary: #f500d4;
+  --secondary: #f172b8;
   --tertiary: #fffd8c;
   --quaternary: #e0dfd5;
   --quinary: #fcf83b;
@@ -31,7 +31,7 @@ body {
   color: var(--primary);
   line-height: 1.5;
   font-size: 16px;
-  background-image: url('../images/header-bg.jpg');
+  background-image: url('../images/thought\ 1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: color;
