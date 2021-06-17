@@ -1,4 +1,5 @@
-const Cent = require('./2cents');
-const Comment = require('./Comment');
+const User = require('./User');
+const Thought = require('./Thought');
+const Reaction = require('./Reaction');
 
-module.exports = { Cent, Comment };
+module.exports = { User, Thought, Reaction };

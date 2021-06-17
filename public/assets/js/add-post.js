@@ -1,4 +1,4 @@
-const $addTopicsBtn = document.querySelector('#add-topics');
+const $addTopicBtn = document.querySelector('#add-topics');
 const $postForm = document.querySelector('#post-form');
 const $customTopicsList = document.querySelector('#custom-topics-list');
 
