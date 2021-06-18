@@ -1,10 +1,12 @@
 const router = require('express').Router();
-const commentRoutes = require('./comment-routes');
-const centsRoutes = require('./2cents-routes');
+const userRoutes = require('./user-routes');
+const thoughtRoutes = require('./thought-routes');
+const { User, Thought, } = require('../../models');
 
-// add prefix of `/posts` to routes created in `2cents-routes.js`
-
-router.use('/comments', commentRoutes);
-router.use('/posts', centsRoutes);
+// add prefixes of /user and /thought
+router.use('/user', userRoutes);
+router.use('/friends', userRoutes);
+router.use('/thoughts', thoughtRoutes);
+router.use('/reactions', thoughtRoutes);
 
 module.exports = router;
