@@ -7,7 +7,7 @@ const getPostList = () => {
       postListArr.forEach(printPost);
     })
     .catch(err => {
-      console.log(err);
+      console.log(err)
     });
 };
 

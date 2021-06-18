@@ -31,7 +31,8 @@ const userController = {
   // create user
   createUser({ body }, res) {
     User.create(body)
-      .then(dbUserData => res.json(dbUserData))
+      .then(dbUserData => res.json(dbUserData));
+      console.log(dbUserData, "checking user data" )
       .catch(err => res.json(err));
   },
 

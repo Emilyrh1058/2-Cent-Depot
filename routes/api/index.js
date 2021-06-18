@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const userRoutes = require('./user-routes');
 const thoughtRoutes = require('./thought-routes');
-const { User, Thought, } = require('../../models');
+const { User, Thought } = require('../../models');
 
 // add prefixes of /user and /thought
 router.use('/user', userRoutes);
