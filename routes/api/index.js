@@ -4,7 +4,7 @@ const thoughtRoutes = require('./thought-routes');
 const { User, Thought } = require('../../models');
 
 // add prefixes of /user and /thought
-router.use('/user', userRoutes);
+router.use('/users', userRoutes);
 router.use('/friends', userRoutes);
 router.use('/thoughts', thoughtRoutes);
 router.use('/reactions', thoughtRoutes);

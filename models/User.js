@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-// const dateFormat = require('../utils/dateFormat');
 
 const UserSchema = new Schema(
   {
@@ -15,11 +14,6 @@ const UserSchema = new Schema(
       unique: true,
       match: [/.+@.+\..+/]
     },
-    // createdAt: {
-    //   type: Date,
-    //   default: Date.now,
-    //   get: createdAtVal => dateFormat(createdAtVal)
-    // },
     thoughts: [
       {
         type: Schema.Types.ObjectId,

@@ -70,5 +70,5 @@ const handlePostSubmit = event => {
     });
 };
 
-$postForm.addEventListener('submit', handlePostSubmit);
+$postForm.addEventListener('click', handlePostSubmit);
 $addTopicBtn.addEventListener('click', handleAddTopic);
