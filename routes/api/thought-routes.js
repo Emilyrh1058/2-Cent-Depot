@@ -11,17 +11,21 @@ const {
 } = require('../../controllers/thought-controller');
 
 // Set up GET all and POST at /api/thoughts
+
 router
   .route('/')
   .get(getAllThoughts)
   
 
 // /api/thoughts/<userId>
-router.route('/:userId').post(addThought);
+router
+  .route('/:userId')
+  .post(addThought);
 
 // /api/thoughts/<userId>/<thoughtId>
 router
   .route('/:userId/:thoughtId')
+  .get(getThoughtById)
   .post(addReaction)
   .put(updateThought)
   .delete(removeThought);
