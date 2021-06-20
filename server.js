@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 app.use(require('./routes'));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/2cents_depot', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Social-Network-API', {
   useFindAndModify: false,
   useNewUrlParser: true,
   useUnifiedTopology: true
