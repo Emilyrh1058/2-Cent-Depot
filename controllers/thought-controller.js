@@ -65,12 +65,12 @@ const thoughtController = {
       { _id: params.thoughtId }, 
       { $push: { reactions: body } }, 
       { new: true, runValidators: true })
-      .then(dbThoughtData => {
-        if (!dbThoughtData) {
+      .then(dbUserData => {
+        if (!dbUserData) {
           res.status(404).json({ message: 'No user found with this id!' });
           return;
         }
-        res.json(dbThoughtData);
+        res.json(dbUserData);
       })
       .catch(err => res.json(err));
   },
@@ -88,12 +88,12 @@ const thoughtController = {
           { new: true }
         );
       })
-      .then(dbThoughtData => {
+      .then(dbUserData => {
         if (!dbUserData) {
           res.status(404).json({ message: 'No user found with this id!' });
           return;
         }
-        res.json(dbThoughtData);
+        res.json(dbUserData);
       })
       .catch(err => res.json(err));
   },
@@ -104,7 +104,7 @@ const thoughtController = {
       { $pull: { reactions: { reactionId: params.reactionId } } },
       { new: true }
     )
-      .then(dbThoughtData => res.json(dbThoughtData))
+      .then(dbUserData => res.json(dbUserData))
       .catch(err => res.json(err));
   }
 };
