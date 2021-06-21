@@ -27,9 +27,8 @@ router
 
 // /api/thoughts/<userId>/<thoughtId>
 router
-  .route('/:id/reactions')
-  .post(addReaction)
-  
+  .route('/:thoughtId/reactions')
+  .post(addReaction)  
 
 // /api/thoughts/<userId>/<thoughtId>/<reactionId>
 router
