@@ -62,14 +62,15 @@ const userController = {
   },
 
   // add friend to user list
-  addFriend({ params, body }, res) {
+  // removed "body" in brackets
+  addFriend({ params }, res) {
     User.findByIdAndUpdate(
-      { _id: params.userId },
-      { $push: { friends: body } },
-      { new: true, runValidators: true })
+      { _id: params.id }, // changed from params.userId to params.id
+      { $addToSet: { friends:params.friendId } },
+      { new: true })
       .then(dbUserData => {
         if (!dbUserData) {
-          res.status(404).json({ message: 'No user found with this id!' });
+          res.status(404).json({ message: 'No friend found with this id!' });
           return;
         }
         res.json(dbUserData);
@@ -80,8 +81,9 @@ const userController = {
   // remove friend
   removeFriend({ params }, res) {
     User.findOneAndUpdate(
-      { _id: params.userId },
-      { $pull: { reactions: { reactionId: params.reactionId } } },
+      { _id: params.id },
+      // { $pull: { reactions: { reactionId: params.reactionId } } },
+      { $pull: { friends:params.friendId }},
       { new: true }
     )
       .then(dbUserData => res.json(dbUserData))
