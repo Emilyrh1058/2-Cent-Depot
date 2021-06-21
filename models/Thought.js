@@ -8,7 +8,7 @@ const ReactionSchema = new Schema(
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId()
     },
-    reactionBody: {
+    reactionText: {
       type: String,
       required: true,
       minLength: 1,
@@ -48,7 +48,12 @@ const ThoughtSchema = new Schema(
       type: String,
       required: true
     },
-    reactions: [ReactionSchema],
+    reactions: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Thought'
+      }
+    ],
   },
   {
     toJSON: {
