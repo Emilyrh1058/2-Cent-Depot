@@ -18,7 +18,6 @@ router
   .post(addThought); // moved from router below /:userId
 
 // /api/thoughts/<userId>
-// GET one, PUT, and DELETE at /api/thoughts/:_id
 router
   .route('/:id')
   .get(getThoughtById)

@@ -61,7 +61,6 @@ const thoughtController = {
 
   // add reaction to thought
   addReaction({ params, body }, res) {
-    // var objReactions = { reactionText: "Sure is!", username: "Salem" }
     Thought.findByIdAndUpdate(
       { _id: params.thoughtId }, 
       { $push: { reactions: body } },
