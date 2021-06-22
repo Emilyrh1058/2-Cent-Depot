@@ -61,18 +61,25 @@ const thoughtController = {
 
   // add reaction to thought
   addReaction({ params, body }, res) {
-    Thought.findById(
+    // var objReactions = { reactionText: "Sure is!", username: "Salem" }
+    Thought.findByIdAndUpdate(
       { _id: params.thoughtId }, 
-      { $push: { reactions: body } }, 
+      { $push: { reactions: body } },
       { new: true, runValidators: true })
       .then(dbUserData => {
         if (!dbUserData) {
           res.status(404).json({ message: 'No user found with this id!' });
           return;
         }
+        console.log("checking", dbUserData)
         res.json(dbUserData);
       })
-      .catch(err => res.json(err));
+      .catch(err => { 
+        console.log("test", err)
+        // res.status(500).json({ message: 'No user found with this id!' });
+
+        res.json(err)
+      });
   },
 
   // remove thought
